@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container-fluid">
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <a href=" {% url 'register' %} ">Register Here</a> <br>
+        <input type="submit" value="Submit" class="btn-sm btn-success">
+        <input type="reset" value="Clear" class="btn-sm btn-danger">
+    </form>
+</div>
+
+{% endblock content %}
